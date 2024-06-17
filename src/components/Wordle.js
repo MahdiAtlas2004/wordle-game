@@ -6,7 +6,6 @@ const Wordle = ({solution}) => {
     
     useEffect(() => {
         window.addEventListener('keyup', handleKeyup)
-
         // this return statement prevent of execution several handle keyup function
         return () => window.removeEventListener('keyup', handleKeyup)
     }, [handleKeyup])
