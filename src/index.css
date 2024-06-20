@@ -31,14 +31,58 @@ h1 {
   font-size: 2.5em;
 }
 .row > div.green {
-  background-color: #5ac85a;
-  border-color: #5ac85a;
+  /* When I use -- before any of these propertise it makes them variables that can be use only inside their own scope. Thus when I use them inside the flip animation it indicates to that particular variable inside that scope that animation has been invoked   */
+  --background-color: #5ac85a;
+  --border-color: #5ac85a;
+  animation: flip 0.5s ease forwards;
 }
 .row > div.grey {
-  background-color: #a1a1a1;
-  border-color: #a1a1a1;
+  --background-color: #a1a1a1;
+  --border-color: #a1a1a1;
+  animation: flip 0.5s ease forwards;
 }
 .row > div.yellow {
-  background-color: #e2cc68;
-  border-color: #e2cc68;
+  --background-color: #e2cc68;
+  --border-color: #e2cc68;
+  animation: flip 0.5s ease forwards;
+}
+/* animation delay */
+.row div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.row div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.row div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.row div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* animations */
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+    background-color: #fff;
+    border-color: #333;
+  }
+  45% {
+    transform: rotateX(90deg);
+    background-color: #fff;
+    border-color: #333;
+  }
+  55% {
+    transform: rotateX(90deg);
+    /* invoking variables using var method */
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+    color: #eee;
+  }
+  100% {
+    transform: rotateX(0);
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+    color: #eee;
+  }
 }
