@@ -9,13 +9,20 @@ const Wordle = ({ solution }) => {
 
   useEffect(() => {
     window.addEventListener("keyup", handleKeyup);
+    // Ending the game when the user find the correct word
+    if(isCorrect) {
+      console.log("Congrats, you win!🎉🎉🎉");
+      window.removeEventListener("keyup", handleKeyup);
+    }
+    // Ending the game when the user is out of the turns
+    if(turn > 5) {
+      console.log("unlucky, out of guesses!");
+      window.removeEventListener("keyup", handleKeyup);
+    }
+
     // this return statement prevent of execution several handle keyup function
     return () => window.removeEventListener("keyup", handleKeyup);
-  }, [handleKeyup]);
-
-  useEffect(() => {
-    console.log(guesses, turn, isCorrect);
-  }, [guesses, turn, isCorrect]);
+  }, [handleKeyup, isCorrect, turn]);
 
   return (
     <div>
