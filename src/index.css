@@ -200,3 +200,49 @@ h1 {
   color: rgb(255, 255, 255);
   transition: all 0.2s ease;
 }
+
+/* InfoModal */
+.info-modal {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.info-modal-content {
+  background-color: white;
+  margin: 10% auto;
+  position: absolute;
+  text-align: start;
+  padding: 20px;
+  overflow: scroll;
+}
+.exit-icon {
+  background-color: yellow;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  right: 20px;
+  position: absolute;
+}
+.exit-icon:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.info-row > .info-col {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #bbb;
+  margin: 4px;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5em;
+}

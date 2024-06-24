@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import Wordle from "./components/Wordle";
 import Header from "./components/Header";
+import InfoModal from "./components/InfoModal";
 
 function App() {
   const [solution, setSolution] = useState(null);
+
+  const [showInfo, setShowInfo] = useState(false);
+  const handleInfo = () => {
+    setShowInfo(!showInfo);  
+    console.log(showInfo);
+  };
 
   useEffect(() => {
     fetch("http://localhost:3001/solutions")
@@ -17,7 +24,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header  handleInfo={handleInfo} />
+      {showInfo && <InfoModal handleInfo={handleInfo}/>}
       {solution && <Wordle solution={solution} />}
     </div>
   );
