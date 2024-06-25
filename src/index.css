@@ -194,7 +194,7 @@ h1 {
   box-shadow: 2px 3px 10px 5px rgba(220, 220, 220, 0.874);
   padding: 3px 0;
 }
-.d2>h1 {
+.d2 > h1 {
   font-size: 2.5em;
   font-family: monospace;
 }
@@ -282,4 +282,17 @@ h1 {
 #e3 {
   background-color: #a1a1a1;
   border-color: #a1a1a1;
+}
+/* Copy Right section */
+.copy-right {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8em;
+  padding-bottom: 0;
+}
+.copy-right > a {
+  color: rgb(0, 140, 255);
+}
+.copy-right > a:hover {
+  color: rgba(0, 140, 255, 0.717);
 }
