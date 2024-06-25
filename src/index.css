@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body {
   box-sizing: border-box;
   text-align: center;
@@ -220,10 +222,10 @@ h1 {
   position: absolute;
   text-align: start;
   padding: 20px;
-  overflow: scroll;
+  box-shadow: 2px 3px 4px rgb(155, 154, 154);
+  /* overflow: scroll; */
 }
 .exit-icon {
-  background-color: yellow;
   font-size: 1.8rem;
   font-weight: bolder;
   right: 20px;
@@ -233,16 +235,36 @@ h1 {
   cursor: pointer;
   color: gray;
 }
-
+.how-to {
+  font-size: 2.4em;
+  font-weight: bolder;
+  font-family: Playfair;
+}
+.info-row {
+  display: flex;
+}
 .info-row > .info-col {
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #bbb;
   margin: 4px;
   text-align: center;
-  line-height: 60px;
+  line-height: 40px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 1.8em;
+}
+#e1 {
+  background-color: #5ac85a;
+  color: white;
+  border-color: #5ac85a;
+}
+#e2 {
+  background-color: #e2cc68;
+  border-color: #e2cc68;
+}
+#e3 {
+  background-color: #a1a1a1;
+  border-color: #a1a1a1;
 }
