@@ -2,36 +2,34 @@ import { useEffect, useState } from "react";
 import Wordle from "./components/Wordle";
 import Header from "./components/Header";
 import InfoModal from "./components/InfoModal";
+import { data } from "./data/db";  // Import the data
 
 function App() {
   const [solution, setSolution] = useState(null);
-
   const [showInfo, setShowInfo] = useState(false);
+
   const handleInfo = () => {
-    setShowInfo(!showInfo);  
+    setShowInfo(!showInfo);
     console.log(showInfo);
   };
 
   useEffect(() => {
-    fetch("http://localhost:3001/solutions")
-      .then((res) => res.json())
-      .then((json) => {
-        //random int between 0 & 14
-        const randomSolution = json[Math.floor(Math.random() * json.length)];
-        setSolution(randomSolution.word);
-      });
-  }, [setSolution]);
+    // Use the imported data directly
+    const randomSolution = data.solutions[Math.floor(Math.random() * data.solutions.length)];
+    setSolution(randomSolution.word);
+  }, []);
 
   return (
     <div className="App">
-      <Header  handleInfo={handleInfo} />
-      {showInfo && <InfoModal handleInfo={handleInfo}/>}
+      <Header handleInfo={handleInfo} />
+      {showInfo && <InfoModal handleInfo={handleInfo} />}
       {solution && <Wordle solution={solution} />}
     </div>
   );
 }
 
 export default App;
+
 
 /* 
 
