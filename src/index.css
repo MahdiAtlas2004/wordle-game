@@ -11,6 +11,11 @@ h1 {
   font-size: 1.2em;
 }
 
+/* Wordle */
+.wordle {
+  margin-top: 25px;
+}
+
 /* rows */
 .row {
   text-align: center;
