@@ -23,7 +23,7 @@ const InfoModal = ({ handleInfo }) => {
             <div className="info-col">R</div>
             <div className="info-col">Y</div>
           </div>
-          <p>W is in the word and in the correct spot.</p>
+          <p><b>W</b> is in the word and in the correct spot.</p>
         </div>
 
         <div className="example">
@@ -36,7 +36,7 @@ const InfoModal = ({ handleInfo }) => {
             <div className="info-col">L</div>
             <div className="info-col">S</div>
           </div>
-          <p>I is in the word but in the wrong spot.</p>
+          <p><b>I</b> is in the word but in the wrong spot.</p>
         </div>
 
         <div className="example">
@@ -49,11 +49,11 @@ const InfoModal = ({ handleInfo }) => {
             </div>
             <div className="info-col">E</div>
           </div>
-          <p>U is not in the word in any spot.</p>
+          <p><b>U</b>  is not in the word in any spot.</p>
         </div>
 
         {/* Copy right */}
-        <div className="copy-right">&copy; Mahdi Atlas | Designed And Developed By <a href="https://linkedin.com/in/mahdi-atlas-59258a289" target="_blank">Mahdi Atlas</a></div>
+        <div className="copy-right">&copy; Mahdi Atlas | Designed And Developed By <a href="https://linkedin.com/in/mahdi-atlas-59258a289" target="_blank" rel="noreferrer">Mahdi Atlas</a></div>
       </div>
     </div>
   );

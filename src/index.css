@@ -69,6 +69,12 @@ h1 {
   max-width: 500px;
   margin: 20px auto;
 }
+/* for mobile devices */
+@media only screen and (max-width: 667px) {
+  .keypad {
+    display: none;
+  }
+}
 .keypad > div {
   margin: 5px;
   width: 40px;
