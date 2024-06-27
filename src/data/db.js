@@ -21,14 +21,14 @@ export const data = {
     { key: "k" },
     { key: "l" },
     { key: "z" },
-    {key: "Enter", class: "enter"},
+    { key: "Enter", class: "enter" },
     { key: "x" },
     { key: "c" },
     { key: "v" },
     { key: "b" },
     { key: "n" },
     { key: "m" },
-    {key: "Backspace", class: "backspace"}
+    { key: "Backspace", class: "backspace" },
   ],
   solutions: [
     { word: "ninja", id: 1 },

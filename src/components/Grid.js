@@ -2,15 +2,8 @@ import React from "react";
 import Row from "./Row";
 
 export default function Grid({ currentGuess, guesses, turn }) {
-  const handleClick = () => {
-    const editableDiv = document.getElementById('grid');
-    if (editableDiv) {
-      editableDiv.focus();
-    }
-  }
-
   return (
-    <div id="grid" onClick={handleClick} tabIndex="0">
+    <div id="grid">
       {guesses.map((g, i) => {
         // checking if there is a current guess that user is typing
         if (turn === i) {
