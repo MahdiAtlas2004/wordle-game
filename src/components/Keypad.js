@@ -5,15 +5,28 @@ export default function Keypad({ usedKeys }) {
   const [letters, setLetters] = useState(null);
 
   useEffect(() => {
-        setLetters(data.letters);
+    setLetters(data.letters);
   }, []);
+
+  const handleClick = (key) => {
+    const event = new KeyboardEvent('keyup', { key: key });
+    window.dispatchEvent(event);
+  };
 
   return (
     <div className="keypad">
       {letters &&
         letters.map((l) => {
           const color = usedKeys[l.key];
-          return <div key={l.key} className={color}>{l.key}</div>;
+          return (
+            <div
+              key={l.key}
+              className={`${color} ${l.class}`}
+              onClick={() => handleClick(l.key)}
+            >
+              {l.key.toUpperCase()}
+            </div>
+          );
         })}
     </div>
   );

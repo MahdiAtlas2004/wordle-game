@@ -11,19 +11,19 @@ const Wordle = ({ solution }) => {
   useEffect(() => {
     window.addEventListener("keyup", handleKeyup);
 
-    // Ending the game when the user find the correct word
+    // Ending the game when the user finds the correct word
     if (isCorrect) {
       setTimeout(() => setShowModal(true), 2000);
       window.removeEventListener("keyup", handleKeyup);
     }
 
-    // Ending the game when the user is out of the turns
+    // Ending the game when the user is out of turns
     if (turn > 5) {
       setTimeout(() => setShowModal(true), 2000);
       window.removeEventListener("keyup", handleKeyup);
     }
 
-    // this return statement prevent of execution several handle keyup function
+    // this return statement prevents the execution of multiple handleKeyup functions
     return () => window.removeEventListener("keyup", handleKeyup);
   }, [handleKeyup, isCorrect, turn]);
 
