@@ -1,17 +1,16 @@
-import React, { useRef } from "react";
+import React from "react";
 import Row from "./Row";
 
 export default function Grid({ currentGuess, guesses, turn }) {
-  const inputRef = useRef(null);
-
   const handleClick = () => {
-    if (inputRef.current) {
-      inputRef.current.focus();
+    const editableDiv = document.getElementById('grid');
+    if (editableDiv) {
+      editableDiv.focus();
     }
-  };
+  }
 
   return (
-    <div onClick={handleClick} style={{ position: 'relative' }}>
+    <div id="grid" onClick={handleClick} tabIndex="0">
       {guesses.map((g, i) => {
         // checking if there is a current guess that user is typing
         if (turn === i) {
@@ -20,21 +19,6 @@ export default function Grid({ currentGuess, guesses, turn }) {
         // returning different rows
         return <Row key={i} guess={g} />;
       })}
-      <input 
-        ref={inputRef} 
-        type="text" 
-        readOnly 
-        style={{
-          position: 'absolute',
-          opacity: 0,
-          height: 0,
-          width: 0,
-          border: 'none',
-          padding: 0,
-          margin: 0,
-          outline: 'none'
-        }} 
-      />
     </div>
   );
 }
