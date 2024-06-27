@@ -21,7 +21,7 @@ export default function Keypad({ usedKeys }) {
           return (
             <div
               key={l.key}
-              className={`${color} ${l.class}`}
+              className={`${color} ${l.class} no-select`}
               onClick={() => handleClick(l.key)}
             >
               {l.key.toUpperCase()}
