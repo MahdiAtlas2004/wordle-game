@@ -84,8 +84,7 @@ h1 {
   }
   .backspace {
     background-color: rgb(78, 78, 78) !important;
-    /* padding: 0 20px !important; */
-    padding-left: 3px !important;
+    padding-left: 6px !important;
     padding-right: 45px !important;
     color: white;
     font-size: 12px;
