@@ -228,6 +228,12 @@ h1 {
   color: rgb(95, 88, 88);
   transition: all 0.2s ease;
 }
+@media only screen and (max-width: 667px) {
+  .info {
+    right: 10px;
+    margin-top: 2px;
+  }
+}
 
 /* InfoModal */
 .info-modal {

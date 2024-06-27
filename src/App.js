@@ -10,7 +10,6 @@ function App() {
 
   const handleInfo = () => {
     setShowInfo(!showInfo);
-    console.log(showInfo);
   };
 
   useEffect(() => {
